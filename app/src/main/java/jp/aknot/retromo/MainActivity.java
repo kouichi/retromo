@@ -4,10 +4,16 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +31,21 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
             }
         });
+
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerView.setHasFixedSize(true);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(layoutManager);
+
+        List<String> dataList = Arrays.asList(
+                "green apple", "avocado", "apricot", "strawberry", "fig", "orange", "persimmon",
+                "raspberry", "kiwi", "chestnut", "grapefruit", "coconut", "cherry", "watermelon",
+                "durian", "pear", "pineapple", "banana", "papaya", "loquat", "grape", "plum",
+                "blueberry", "muscat", "muskmelon", "mango", "mandarin orange", "melon", "peach",
+                "yuzu", "lime", "raspberry", "apple", "lemon");
+        MyAdapter adapter = new MyAdapter(dataList,
+                (view, position) -> Toast.makeText(this, "Clicked: [" + position + "] " + dataList.get(position), Toast.LENGTH_SHORT).show());
+        recyclerView.setAdapter(adapter);
     }
 
     @Override
