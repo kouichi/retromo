@@ -3,15 +3,15 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="@dimen/recycler_view_item_text_label_horizontal_padding"
+              android:layout_marginRight="@dimen/recycler_view_item_text_label_horizontal_padding">
 
     <TextView
         android:id="@+id/text_label"
         android:layout_width="match_parent"
         android:layout_height="@dimen/recycler_view_item_text_label_height"
         android:layout_gravity="center_vertical"
-        android:paddingLeft="@dimen/recycler_view_item_text_label_horizontal_padding"
-        android:paddingRight="@dimen/recycler_view_item_text_label_horizontal_padding"
         android:textSize="@dimen/recycler_view_item_text_label_text_size"
         android:gravity="center_vertical"
         tools:text="Apple"

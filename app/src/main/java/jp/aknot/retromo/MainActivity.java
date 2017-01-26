@@ -46,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
         MyAdapter adapter = new MyAdapter(dataList,
                 (view, position) -> Toast.makeText(this, "Clicked: [" + position + "] " + dataList.get(position), Toast.LENGTH_SHORT).show());
         recyclerView.setAdapter(adapter);
+
+        ItemDividerDecoration dividerDecoration = new ItemDividerDecoration(this);
+        recyclerView.addItemDecoration(dividerDecoration);
     }
 
     @Override
