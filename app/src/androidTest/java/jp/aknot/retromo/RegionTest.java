@@ -40,14 +40,14 @@ public class RegionTest {
     }
 
     private static final Region[] REGIONS = new Region[]{
-            new Region(1, "01", "北海道地方"),
-            new Region(2, "02", "東北地方"),
-            new Region(3, "03", "関東地方"),
-            new Region(4, "04", "中部地方"),
-            new Region(5, "05", "近畿地方"),
-            new Region(6, "06", "中国地方"),
-            new Region(7, "07", "四国地方"),
-            new Region(8, "08", "九州地方"),
+            new Region("01", "北海道地方"),
+            new Region("02", "東北地方"),
+            new Region("03", "関東地方"),
+            new Region("04", "中部地方"),
+            new Region("05", "近畿地方"),
+            new Region("06", "中国地方"),
+            new Region("07", "四国地方"),
+            new Region("08", "九州地方"),
     };
 
     @Test
@@ -86,7 +86,7 @@ public class RegionTest {
                     .codeEq("03")
                     .execute();
             assertThat(cursor.getCount(), is(1));
-            assertThat(cursor.getColumnCount(), is(3));
+            assertThat(cursor.getColumnCount(), is(2));
             if (cursor.moveToFirst()) {
                 do {
                     assertThat(cursor.getString(cursor.getColumnIndex("code")), is("03"));
