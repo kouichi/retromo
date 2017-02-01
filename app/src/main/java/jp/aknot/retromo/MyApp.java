@@ -12,7 +12,7 @@ public class MyApp extends Application {
         super.onCreate();
 
         if (BuildConfig.DEBUG) {
-            Timber.plant(new Timber.DebugTree());
+            Timber.plant(new MyTree());
         }
         Stetho.initializeWithDefaults(this);
     }
