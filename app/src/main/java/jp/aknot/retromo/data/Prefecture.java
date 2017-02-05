@@ -24,4 +24,9 @@ public class Prefecture {
 
     @Column(indexed = true)
     public final Region region;
+
+    // すべての都道府県
+    public static Prefecture_Relation relation(OrmaDatabase orma) {
+        return orma.relationOfPrefecture().orderByCodeAsc();
+    }
 }
