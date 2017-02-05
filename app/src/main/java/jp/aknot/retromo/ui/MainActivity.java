@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.LoaderManager;
-import android.support.v4.content.AsyncTaskLoader;
 import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -22,7 +21,6 @@ import jp.aknot.retromo.BuildConfig;
 import jp.aknot.retromo.R;
 import jp.aknot.retromo.data.OrmaDatabase;
 import jp.aknot.retromo.data.Prefecture;
-import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<Prefecture>> {
 
@@ -99,9 +97,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void onLoaderReset(Loader<List<Prefecture>> loader) {
     }
 
-    private static class PrefectureLoadTask extends AsyncTaskLoader<List<Prefecture>> {
-
-        private boolean isRunning = false;
+    private static class PrefectureLoadTask extends AbstractAsyncTaskLoader<List<Prefecture>> {
 
         public PrefectureLoadTask(Context context) {
             super(context);
@@ -113,21 +109,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                     .trace(BuildConfig.DEBUG)
                     .build();
             return Prefecture.relation(orma).selector().toList();
-        }
-
-        @Override
-        protected void onStartLoading() {
-            Timber.v("onStartLoading:");
-            if (!isRunning || takeContentChanged()) {
-                forceLoad();
-            }
-        }
-
-        @Override
-        protected void onForceLoad() {
-            Timber.v("onForceLoad:");
-            super.onForceLoad();
-            this.isRunning = true;
         }
     }
 }

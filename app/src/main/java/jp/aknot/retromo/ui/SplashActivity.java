@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.LoaderManager;
-import android.support.v4.content.AsyncTaskLoader;
 import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 
@@ -144,9 +143,7 @@ public class SplashActivity extends AppCompatActivity implements LoaderManager.L
             new Prefecture("47", "沖縄県", REGIONS[7])
     };
 
-    private static class PrepareInitialDataTaskLoader extends AsyncTaskLoader<Void> {
-
-        private boolean isRunning = false;
+    private static class PrepareInitialDataTaskLoader extends AbstractAsyncTaskLoader<Void> {
 
         public PrepareInitialDataTaskLoader(Context context) {
             super(context);
@@ -167,21 +164,6 @@ public class SplashActivity extends AppCompatActivity implements LoaderManager.L
                 prefectureInserter.executeAll(Arrays.asList(PREFECTURES));
             });
             return null;
-        }
-
-        @Override
-        protected void onStartLoading() {
-            Timber.v("onStartLoading:");
-            if (!isRunning || takeContentChanged()) {
-                forceLoad();
-            }
-        }
-
-        @Override
-        protected void onForceLoad() {
-            Timber.v("onForceLoad:");
-            super.onForceLoad();
-            this.isRunning = true;
         }
     }
 
