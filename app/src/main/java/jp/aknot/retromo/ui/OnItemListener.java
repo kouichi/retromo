@@ -1,4 +1,4 @@
-package jp.aknot.retromo;
+package jp.aknot.retromo.ui;
 
 import android.view.View;
 

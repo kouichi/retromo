@@ -1,4 +1,4 @@
-package jp.aknot.retromo;
+package jp.aknot.retromo.ui;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +13,8 @@ import com.github.gfx.android.orma.Inserter;
 
 import java.util.Arrays;
 
+import jp.aknot.retromo.BuildConfig;
+import jp.aknot.retromo.R;
 import jp.aknot.retromo.data.OrmaDatabase;
 import jp.aknot.retromo.data.Prefecture;
 import jp.aknot.retromo.data.Region;

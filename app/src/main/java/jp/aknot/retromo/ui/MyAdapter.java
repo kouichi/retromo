@@ -1,4 +1,4 @@
-package jp.aknot.retromo;
+package jp.aknot.retromo.ui;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.List;
+
+import jp.aknot.retromo.R;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ItemViewHolder> {
 

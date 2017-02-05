@@ -1,4 +1,4 @@
-package jp.aknot.retromo;
+package jp.aknot.retromo.ui;
 
 import android.content.Context;
 import android.content.res.TypedArray;

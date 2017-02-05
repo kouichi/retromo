@@ -1,4 +1,4 @@
-package jp.aknot.retromo;
+package jp.aknot.retromo.ui;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import jp.aknot.retromo.R;
 import jp.aknot.retromo.data.Prefecture;
 
 public class PrefectureAdapter extends RecyclerView.Adapter<PrefectureAdapter.ItemViewHolder> {

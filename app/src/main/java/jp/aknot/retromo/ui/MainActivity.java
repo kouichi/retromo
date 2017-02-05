@@ -1,4 +1,4 @@
-package jp.aknot.retromo;
+package jp.aknot.retromo.ui;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -18,6 +18,8 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import jp.aknot.retromo.BuildConfig;
+import jp.aknot.retromo.R;
 import jp.aknot.retromo.data.OrmaDatabase;
 import jp.aknot.retromo.data.Prefecture;
 import timber.log.Timber;
