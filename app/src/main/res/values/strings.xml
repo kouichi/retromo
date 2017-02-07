@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">Retromo</string>
+    <string name="app_name">Libraries Demo App</string>
     <string name="action_settings">Settings</string>
 
     <string name="launching_app_progress_bar_msg">アプリを起動しています…</string>
+
+    <string name="left_drawer_description">機能を選択してください</string>
 </resources>
