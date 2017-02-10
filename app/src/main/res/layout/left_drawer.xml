@@ -1,27 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:id="@+id/left_drawer"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              android:layout_gravity="start">
-
-    <TextView
-        android:layout_width="@dimen/left_drawer_list_view_width"
-        android:layout_height="wrap_content"
-        android:text="@string/left_drawer_description"
-        android:textSize="@dimen/left_drawer_description_text_size"
-        android:padding="@dimen/left_drawer_description_padding"
-        android:textColor="@android:color/white"
-        android:background="@color/colorPrimaryDark"
-        />
-
-    <ListView
-        android:id="@+id/left_drawer_list_view"
-        android:layout_width="@dimen/left_drawer_list_view_width"
-        android:layout_height="match_parent"
-        android:choiceMode="singleChoice"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="@dimen/left_drawer_list_view_divider_height"
-        android:background="@android:color/white"/>
-</LinearLayout>
+<android.support.design.widget.NavigationView xmlns:android="http://schemas.android.com/apk/res/android"
+                                              xmlns:app="http://schemas.android.com/apk/res-auto"
+                                              android:id="@+id/navigation_view"
+                                              android:layout_width="wrap_content"
+                                              android:layout_height="match_parent"
+                                              android:fitsSystemWindows="true"
+                                              android:layout_gravity="start"
+                                              app:headerLayout="@layout/drawer_header"
+                                              app:menu="@menu/drawer_menu"/>

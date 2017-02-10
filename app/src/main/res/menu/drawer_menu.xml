@@ -1,0 +1,48 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/drawer_menu_group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/navi_item_list"
+            android:icon="@drawable/ic_list"
+            android:title="@string/drawer_menu_navi_item_title_list"/>
+        <item
+            android:id="@+id/navi_item_photos"
+            android:icon="@drawable/ic_photo_library"
+            android:title="@string/drawer_menu_navi_item_title_photos"/>
+        <item
+            android:id="@+id/navi_item_map"
+            android:icon="@drawable/ic_map"
+            android:title="@string/drawer_menu_navi_item_title_map"/>
+    </group>
+
+    <group
+        android:id="@+id/drawer_menu_group2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/navi_item_list2"
+            android:icon="@drawable/ic_list"
+            android:title="@string/drawer_menu_navi_item_title_list2"/>
+        <item
+            android:id="@+id/navi_item_photos2"
+            android:icon="@drawable/ic_photo_library"
+            android:title="@string/drawer_menu_navi_item_title_photos2"/>
+        <item
+            android:id="@+id/navi_item_map2"
+            android:icon="@drawable/ic_map"
+            android:title="@string/drawer_menu_navi_item_title_map2"/>
+    </group>
+
+    <item android:title="@string/drawer_menu_title_settings">
+        <menu>
+            <item
+                android:id="@+id/navi_item_other1"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/drawer_menu_navi_item_title_other1"/>
+            <item
+                android:id="@+id/navi_item_other2"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/drawer_menu_navi_item_title_other2"/>
+        </menu>
+    </item>
+</menu>

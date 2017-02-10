@@ -5,4 +5,15 @@
     <string name="launching_app_progress_bar_msg">アプリを起動しています…</string>
 
     <string name="left_drawer_description">機能を選択してください</string>
+
+    <string name="drawer_menu_navi_item_title_list">一覧</string>
+    <string name="drawer_menu_navi_item_title_photos">写真</string>
+    <string name="drawer_menu_navi_item_title_map">地図</string>
+    <string name="drawer_menu_navi_item_title_list2">一覧2</string>
+    <string name="drawer_menu_navi_item_title_photos2">写真2</string>
+    <string name="drawer_menu_navi_item_title_map2">地図2</string>
+    <string name="drawer_menu_title_settings">設定</string>
+    <string name="drawer_menu_navi_item_title_other1">その他1</string>
+    <string name="drawer_menu_navi_item_title_other2">その他2</string>
+
 </resources>
